@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T01 Website</title>
+
+  <!-- Manrope Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: #F5F0E6;
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+      min-height: 80px;
+      background: #101B2D;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 8%;
+    }
+
+    .logo {
+      color: #FCFAF5;
+      font-size: 30px;
+      font-weight: 800;
+    }
+
+    .logo span {
+      color: #F4A340;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 35px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #FCFAF5;
+      font-size: 14px;
+    }
+
+    .login-btn,
+    .primary-btn {
+      background: #F4A340;
+      color: #17243B;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 7px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* HERO SECTION */
+
+    .hero {
+      min-height: 490px;
+      background: #17243B;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 65px 10%;
+      gap: 50px;
+    }
+
+    .hero-content,
+    .hero-visual {
+      width: 50%;
+    }
+
+    .small-line {
+      width: 85px;
+      height: 7px;
+      background: #F4A340;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .hero-line {
+      width: 90%;
+      height: 25px;
+      background: #FCFAF5;
+      border-radius: 5px;
+      margin: 15px 0;
+    }
+
+    .hero-line.short {
+      width: 60%;
+      opacity: 0.6;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 35px;
+    }
+
+    .outline-btn {
+      padding: 12px 25px;
+      color: #FCFAF5;
+      background: transparent;
+      border: 1px solid #FCFAF5;
+      border-radius: 7px;
+      cursor: pointer;
+    }
+
+    /* HERO VISUAL */
+
+    .hero-visual {
+      background: #263B59;
+      padding: 25px;
+      border-radius: 20px;
+    }
+
+    .visual-main {
+      height: 180px;
+      background: #F5F0E6;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .visual-row {
+      display: flex;
+      gap: 15px;
+    }
+
+    .visual-card {
+      height: 85px;
+      flex: 1;
+      border-radius: 10px;
+    }
+
+    .blue {
+      background: #397CBA;
+    }
+
+    .amber {
+      background: #F4A340;
+    }
+
+    /* CREAM SECTIONS */
+
+    .section {
+      padding: 70px 10%;
+    }
+
+    .cream-section {
+      background: #F5F0E6;
+    }
+
+    .section-heading {
+      width: 210px;
+      height: 25px;
+      color: #ffffff;
+      text-align: center;
+      font-family: 'Manrope', sans-serif;
+      background: #17243B;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .design-card {
+      background: #FFFFFF;
+      padding: 18px;
+      height: 190px;
+      border-radius: 14px;
+      box-shadow: 0 5px 20px #17243B12;
+    }
+
+    .design-card div {
+      height: 115px;
+      background: #E2EDF6;
+      border-radius: 9px;
+    }
+
+    .second-heading {
+      margin-top: 70px;
+    }
+
+    .product div {
+      background: #DCE9E1;
+    }
+
+    /* WHY T01 */
+
+    .why-section {
+      background: #17243B;
+      padding: 70px 10%;
+    }
+
+    .light-heading {
+      background: #5e4505;
+    }
+
+    .feature-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .feature {
+      height: 135px;
+      background: #263B59;
+      border-radius: 14px;
+    }
+
+    /* CTA SECTION */
+
+    .cta-section {
+      background: #F5F0E6;
+      padding: 65px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cta-line {
+      width: 45%;
+      height: 18px;
+      background: #17243B;
+      border-radius: 10px;
+    }
+
+    .cta-button {
+      width: 130px;
+      height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      color: #17243B;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      background: #F4A340;
+      border-radius: 8px;
+    }
+
+    /* FOOTER */
+
+    .footer {
+      background: #101B2D;
+      padding: 35px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-logo {
+      color: #FCFAF5;
+      font-size: 25px;
+      font-weight: 800;
+    }
+
+    .footer-line {
+      width: 35%;
+      height: 8px;
+      background: #263B59;
+      border-radius: 10px;
+    }
+
+    /* MOBILE RESPONSIVE */
+
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .hero {
+        flex-direction: column;
+        padding: 50px 7%;
+      }
+
+      .hero-content,
+      .hero-visual {
+        width: 100%;
+      }
+
+      .cards,
+      .feature-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .section,
+      .why-section {
+        padding: 50px 7%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">T01<span>.</span></div>
+
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <!-- <a href="#">Roadmaps</a>
+      <a href="#">Products</a> -->
+      <a href="#">About</a>
+    </div>
+
+    <button class="login-btn">Login</button>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+
+    <div class="hero-content">
+      <div class="small-line"></div>
+      <div class="hero-line"></div>
+      <div class="hero-line short"></div>
+
+      <div class="hero-buttons">
+        <button class="primary-btn">Explore For Free</button>
+        <button class="outline-btn">Get Started</button>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="visual-main"></div>
+
+      <div class="visual-row">
+        <div class="visual-card blue"></div>
+        <div class="visual-card amber"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CAREER ROADMAPS AND PRODUCTS -->
+  <section class="section cream-section">
+
+    <div class="section-heading">
+        Explore What We Offer
+        
+    </div>
+
+    <div class="cards">
+      <div class="design-card"><div></div></div>
+      <div class="design-card"><div></div></div>
+      <div class="design-card"><div></div></div>
+    </div>
+
+    <div class="section-heading second-heading">
+        Explore Our Solutions
+    </div>
+
+    <div class="cards">
+      <div class="design-card product"><div></div></div>
+      <div class="design-card product"><div></div></div>
+      <div class="design-card product"><div></div></div>
+    </div>
+
+  </section>
+
+  <!-- WHY T01 -->
+  <section class="why-section">
+
+    <div class="section-heading light-heading">Why Choose T01?</div>
+
+    <div class="feature-cards">
+      <div class="feature"></div>
+      <div class="feature"></div>
+      <div class="feature"></div>
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-line"></div>
+    <div class="cta-button">Get Started</div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">T01.</div>
+    <div class="footer-line"></div>
+  </footer>
+
+  <script>
+    // JavaScript can be added here later.
+  </script>
+
+</body>
+</html>
